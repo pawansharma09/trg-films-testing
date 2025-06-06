@@ -20,6 +20,20 @@
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="mobile-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#home" onclick="closeMobileMenu()">Home</a>
+            <a href="#portfolio" onclick="closeMobileMenu()">Portfolio</a>
+            <a href="#services" onclick="closeMobileMenu()">Services</a>
+            <a href="#clients" onclick="closeMobileMenu()">Clients</a>
+            <a href="#about" onclick="closeMobileMenu()">About</a>
+            <a href="#testimonials" onclick="closeMobileMenu()">Testimonials</a>
+            <a href="#contact" onclick="closeMobileMenu()">Contact</a>
         </div>
     </nav>
 
@@ -27,7 +41,7 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>TRG Films</h1>
-            <p>Crafting Visual Stories That Captivate, Inspire, and Convert</p>
+            <p>Your Imagination, Our Reality!</p>
             <a href="#contact" class="cta-button">Start Your Project</a>
         </div>
     </section>
@@ -185,12 +199,12 @@
     <!-- About Section -->
     <section id="about" class="section">
         <h2 class="section-title">About TRG Films</h2>
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #cccccc;">
+        <div class="about-content">
+            <p>
                 Founded with a passion for visual storytelling, TRG Films has grown into a premier video editing and production company. 
                 We combine cutting-edge technology with creative expertise to deliver content that not only looks stunning but drives real business results.
             </p>
-            <p style="font-size: 1.1rem; color: #aaaaaa;">
+            <p>
                 Our team of skilled editors, motion graphics artists, and creative directors work collaboratively to bring your vision to life. 
                 From concept to completion, we're committed to excellence in every frame.
             </p>
@@ -219,6 +233,12 @@
     <!-- Contact Section -->
     <section id="contact" class="section">
         <h2 class="section-title">Let's Create Something Amazing</h2>
+        <div class="success-message" id="successMessage">
+            Thank you for your inquiry! We'll get back to you within 24 hours.
+        </div>
+        <div class="error-message" id="errorMessage">
+            Sorry, there was an error sending your message. Please try again or contact us directly.
+        </div>
         <form class="contact-form fade-in" onsubmit="handleSubmit(event)">
             <div class="form-group">
                 <label for="name">Name *</label>
@@ -234,7 +254,7 @@
             </div>
             <div class="form-group">
                 <label for="project">Project Type</label>
-                <select id="project" name="project" style="width:100%;padding:1rem;background:rgba(255,255,255,0.1);border:1px solid rgba(78,205,196,0.3);border-radius:10px;color:white;">
+                <select id="project" name="project">
                     <option value="">Select a service</option>
                     <option value="video-editing">Video Editing</option>
                     <option value="motion-graphics">Motion Graphics</option>
@@ -246,7 +266,7 @@
             </div>
             <div class="form-group">
                 <label for="budget">Budget Range</label>
-                <select id="budget" name="budget" style="width:100%;padding:1rem;background:rgba(255,255,255,0.1);border:1px solid rgba(78,205,196,0.3);border-radius:10px;color:white;">
+                <select id="budget" name="budget">
                     <option value="">Select budget range</option>
                     <option value="under-5k">Under $5,000</option>
                     <option value="5k-15k">$5,000 - $15,000</option>
@@ -259,7 +279,6 @@
                 <textarea id="message" name="message" rows="5" required placeholder="Describe your vision, goals, and any specific requirements..."></textarea>
             </div>
             <button type="submit" class="submit-btn">Send Inquiry</button>
-            
         </form>
     </section>
 
@@ -269,12 +288,11 @@
             <p>&copy; 2025 TRG Films. All rights reserved.</p>
             <p style="margin-top: 1rem; color: #888;">
                 Professional Video Editing & Production Services | 
-                <a href="mailto:hello@trgfilms.com" style="color: #4ecdc4;">trgfilms@gmail.com</a> | 
-                <a href="tel:+1234567890" style="color: #4ecdc4;">+91 1234567898 </a>
+                <a href="mailto:trgfilms@gmail.com">trgfilms@gmail.com</a> | 
+                <a href="tel:+911234567898">+91 1234567898</a>
             </p>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
